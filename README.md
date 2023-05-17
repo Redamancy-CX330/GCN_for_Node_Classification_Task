@@ -2,7 +2,7 @@
 
 ## Goal
 
-Leverage GCN for node classification tasks on datasets Cora, Citeseer and Pubmed.
+Leverage GCN for node classification tasks on datasets Cora, Citeseer and PubMed.
 
 ## Datasets
 
@@ -66,9 +66,15 @@ The PubMed dataset includes 19,717 scientific publications on diabetes from the 
 
 The citation network consists of 44338 links. Each publication in the dataset is described by a TF/IDF-weighted word vector from a dictionary of 500 unique words. TF-IDF (term frequency–inverse document frequency) is a commonly used weighting technique for information retrieval and data mining. TF is Term Frequency, and IDF is Inverse Document Frequency. TF-IDF is a statistical method for evaluating the importance of a word to a document set or a document in a corpus. The importance of a word increases proportionally to the number of times it appears in the document, but decreases inversely proportional to the frequency it appears in the corpus.
 
+## GCN Model Framework
+
+
+
 ## Environment
 
 python == 3.8.16
+
+cuda == 11.3
  
 pytorch == 1.12.1
 
@@ -79,8 +85,16 @@ matplotlib == 3.7.1
 
 ## Usage
 
+```python
+python gcn_cora.py
+python gcn_citeseer.py
+python gcn_pubmed.py
+```
+**Note:** The `Parameter` folder holds the GCN model training parameters that yield the results of the model runs. Files `GCNCora.pkl`, `GCNCiteseer.pkl`, `GCNPubMed.pkl` correspond to the datasets `Cora`, `Citeseer`, and `PubMed`, respectively. And see file `gcn.ipynb` for the detailed implementation.
 
 ## Result
+
+Measure model node classification using classification metrics: 
 
 |Dataset|Accuracy|F1_score|
 |:----:|:----:|:----:|
@@ -91,4 +105,6 @@ matplotlib == 3.7.1
 ## Reference
 - Zhilin Yang, William Cohen, Ruslan Salakhudinov. [Proceedings of Machine Learning Research.](http://proceedings.mlr.press/v48/yanga16) *Proceedings of The 33rd International Conference on Machine Learning, PMLR 48*:40-48, 2016.
 
-- [GRAPH CONVOLUTIONAL NETWORKS.](https://tkipf.github.io/graph-convolutional-networks/)
+- [Graph Convolutional Networks.](https://tkipf.github.io/graph-convolutional-networks/)
+
+- [PyG: Learning Methods on Graphs.](https://pytorch-geometric.readthedocs.io/en/latest/get_started/introduction.html#learning-methods-on-graphs)

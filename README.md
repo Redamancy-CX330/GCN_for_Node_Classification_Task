@@ -16,7 +16,7 @@ Leverage GCN for node classification tasks on datasets Cora, Citeseer and PubMed
 
 https://github.com/kimiyoung/planetoid/tree/master/data
 
-Datasets for Cora, Citeseet, and PubMed are available in the directory `Cora`, `Citeseet`,  and PubMed, in a preprocessed format stored as numpy/scipy files.
+Datasets for Cora, Citeseet, and PubMed are available in the directory `Cora`, `Citeseet`,  and `PubMed`, in a preprocessed format stored as numpy/scipy files.
 
 > - `allx`, the feature vectors of both labeled and unlabeled training instances (a superset of  `x`),
 > 
@@ -68,7 +68,7 @@ The citation network consists of 44338 links. Each publication in the dataset is
 
 ## GCN Model Framework
 
-
+![Image text](https://github.com/Redamancy-CX330/GCN_for_Node_Classification_Task/blob/main/GCN%20Framework.png)
 
 ## Environment
 
